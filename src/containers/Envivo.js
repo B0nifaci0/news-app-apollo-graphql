@@ -1,81 +1,76 @@
-import React, { Component } from 'react';
-import { Container, Content, List, ListItem, Left, Body, Right, Thumbnail, Text } from 'native-base';
+import {
+  Text,
+  View,
+  SafeAreaView
+} from 'react-native';
+import * as React from 'react';
 
-class Envivo extends Component {
-  render () {
+import Carousel from 'react-native-snap-carousel';
+
+class Envivo extends React.Component {
+
+
+  constructor ( props ) {
+    super( props );
+    this.state = {
+      activeIndex: 0,
+      carouselItems: [
+        {
+          title: "Item 1",
+          text: "Text 1",
+        },
+        {
+          title: "Item 2",
+          text: "Text 2",
+        },
+        {
+          title: "Item 3",
+          text: "Text 3",
+        },
+        {
+          title: "Item 4",
+          text: "Text 4",
+        },
+        {
+          title: "Item 5",
+          text: "Text 5",
+        },
+      ]
+    }
+  }
+
+  _renderItem ( { item, index } ) {
     return (
-      <Container>
-        <Content>
-          <List>
-          </List>
-          <ListItem avatar>
-            <Left>
-              <Thumbnail source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/envivoimg/flor_rubio_formulaEspectacular_radioFormula_03.jpg' }} />
-            </Left>
-            <Body>
-              <Text>Fórmula Espectacular con Flor Rubio</Text>
-              <Text note>103.3 FM</Text>
-            </Body>
-            <Right>
-            </Right>
-            <Left>
-              <Thumbnail source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/envivoimg/eduardo_ruiz_healy_radioFormula_03.jpg' }} />
-            </Left>
-            <Body>
-              <Text>Eduardo Ruíz Healy	</Text>
-              <Text note>104.1 FM</Text>
-            </Body>
-            <Right>
-            </Right>
-          </ListItem>
-        </Content>
-        <Content>
-          <ListItem avatar>
-            <Left>
-              <Thumbnail source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/envivoimg/formulaFinanciera_radioFormula_03.jpg' }} />
-            </Left>
-            <Body>
-              <Text>Fórmula Financiera	 con Ma. Carmen Cortés, Marco A. Mares y Jóse Yuste</Text>
-              <Text note>1470 AM</Text>
-            </Body>
-            <Right>
-            </Right>
-            <Left>
-              <Thumbnail source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/envivoimg/paola_rojas_enFormula_radioFormula_03.jpg' }} />
-            </Left>
-            <Body>
-              <Text>Paola Rojas en Fórmula con Paola Rojas		</Text>
-              <Text note>970 AM</Text>
-            </Body>
-            <Right>
-            </Right>
-          </ListItem>
-        </Content>
-        <Content>
-          <ListItem avatar>
-            <Left>
-              <Thumbnail source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/envivoimg/chumel_torres_LaRadioDeLaRepublica_radioFormula_03.jpg' }} />
-            </Left>
-            <Body>
-              <Text>La Radio de la República  Con Chumel Torres	</Text>
-              <Text note>1500 AM</Text>
-            </Body>
-            <Right>
-            </Right>
-            <Left>
-              <Thumbnail source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/envivoimg/contra_ataque_deportivo_radioFormula_03.jpg' }} />
-            </Left>
-            <Body>
-              <Text>Contra Ataque Deportivo con Luis García, Christian Martinoli, Antonio Rosique, Rodolfo Vargas			</Text>
-              <Text note>TeleFórmula</Text>
-            </Body>
-            <Right>
-            </Right>
-          </ListItem>
-        </Content>
-      </Container >
+      <View style={{
+        backgroundColor: 'floralwhite',
+        borderRadius: 5,
+        height: 250,
+        padding: 50,
+        marginLeft: 25,
+        marginRight: 25,
+      }}>
+        <Text style={{ fontSize: 30 }}>{item.title}</Text>
+        <Text>{item.text}</Text>
+      </View>
 
     )
+  }
+
+  render () {
+    return (
+      <SafeAreaView style={{ flex: 1, backgroundColor: 'rebeccapurple', paddingTop: 50, }}>
+        <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center', }}>
+          <Carousel
+            layout={"default"}
+            ref={ref => this.carousel = ref}
+            data={this.state.carouselItems}
+            sliderWidth={300}
+            itemWidth={300}
+            renderItem={this._renderItem}
+            onSnapToItem={index => this.setState( { activeIndex: index } )} />
+        </View>
+      </SafeAreaView>
+    );
   }
 }
 

@@ -1,196 +1,80 @@
-import React, { Component } from 'react';
-import {
-  Card,
-  Container,
-  CardItem,
-  Body,
-  Text,
-  Thumbnail,
-  ListItem,
-  List,
-  Content,
-  Left,
-  Right,
-  Button
-} from 'native-base';
-export default class CardExample extends Component {
-  render () {
-    return (
-      <Container>
-        <Content>
-          <List>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2020/04/3181-casos-coronavirus-en-mexico-salud-federal-hoy-ultimas-noticias-8-de-abril.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text >Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2020/02/yanet110220.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2019/05/ingridcoronado.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2020/04/3181-casos-coronavirus-en-mexico-salud-federal-hoy-ultimas-noticias-8-de-abril.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2020/04/johnny-depp-pierde-dedo-pelea-salvaje.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2020/04/ALEJANDRO-080420.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2020/04/3181-casos-coronavirus-en-mexico-salud-federal-hoy-ultimas-noticias-8-de-abril.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text >Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2020/02/yanet110220.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2019/05/ingridcoronado.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2020/04/3181-casos-coronavirus-en-mexico-salud-federal-hoy-ultimas-noticias-8-de-abril.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2020/04/johnny-depp-pierde-dedo-pelea-salvaje.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://www.radioformula.com.mx/wp-content/uploads/2020/04/ALEJANDRO-080420.jpg' }} />
-              </Left>
-              <Body>
-                <Text>Sankhadeep</Text>
-                <Text note numberOfLines={1}>Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>Ver Más</Text>
-                </Button>
-              </Right>
-            </ListItem>
-          </List>
-        </Content>
-      </Container >
+import React, { Component, useState, useEffect } from 'react';
+import { Image } from 'react-native';
+import { Content, Card, CardItem, Text, Button, Icon, Left, Body, Spinner } from 'native-base';
 
-    );
+//import { gql } from "apollo-boost";
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/react-hooks';
+
+const GET_POSTS = gql`
+query {
+  posts {
+    edges {
+      node {
+        id
+        title
+        content
+        date
+          featuredImage {
+          mediaItemUrl
+        }
+      }
+    }
   }
 }
+`;
+
+const Home = () => {
+
+  const { loading, error, data } = useQuery( GET_POSTS );
+  const ulrimg = useState( "https://x.kinja-static.com/assets/images/logos/placeholders/default.png" );
+
+  useEffect( () => {
+    console.log( "loading", loading );
+    console.log( "error", JSON.stringify( error ) );
+    console.log( "data", JSON.stringify( data ) );
+  }, [] )
+
+  return (
+    <>
+      <Content>
+        {
+
+          ( data && data.posts )
+            ? data.posts.edges.map( ( { node } ) => (
+              <Card key={node.id} style={{ flex: 0 }}>
+                <CardItem >
+                  <Body>
+                    <Image key={node.id} source={{ uri: node.featuredImage != null ? node.featuredImage.mediaItemUrl : "https://x.kinja-static.com/assets/images/logos/placeholders/default.png" }} style={{ height: 400, width: 600, flex: 1 }} />
+                    <Text>
+                      {node.title}
+                    </Text>
+                    <Text>
+                      {node.content}
+                    </Text>
+                  </Body>
+                </CardItem>
+                <CardItem>
+                  <Left>
+                    <Button transparent textStyle={{ color: '#87838B' }}>
+                      <Icon name="like" />
+                      <Text>1,926 stars</Text>
+                    </Button>
+                  </Left>
+                </CardItem>
+              </Card>
+            ) )
+
+            :
+            <Content>
+              <Spinner color='blue' />
+            </Content>
+        }
+      </Content>
+    </>
+  )
+}
+
+
+
+export default Home;
