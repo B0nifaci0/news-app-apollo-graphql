@@ -57,8 +57,8 @@ const Home = () => {
                 <CardItem>
                   <Left>
                     <Button transparent textStyle={{ color: '#87838B' }}>
-                      <Icon name="like" />
-                      <Text>1,926 stars</Text>
+                      <Icon name="share" />
+                      <Text>1,926</Text>
                     </Button>
                   </Left>
                 </CardItem>
